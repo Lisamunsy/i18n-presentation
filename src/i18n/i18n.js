@@ -6,7 +6,7 @@ import frMessages from "./fr";
 const shortDatetimeFormat = {
     year: 'numeric', month: '2-digit', day: '2-digit'
 }
-const longDatetimeFormat ={
+const longDatetimeFormat = {
     year: 'numeric', month: 'long', day: 'numeric'
 }
 
@@ -21,6 +21,19 @@ const datetimeFormats = {
     }
 }
 
+const numberFormats = {
+    'en': {
+        currency: {
+            style: 'currency', currency: 'USD', notation: 'standard'
+        }
+    },
+    'fr':{
+        currency: {
+            style: 'currency', currency: 'EUR', notation: 'standard'
+        }
+    }
+}
+
 const i18n = createI18n({
     locale: 'en',
     fallbackLocale: 'en',
@@ -28,7 +41,8 @@ const i18n = createI18n({
         en: enMessages,
         fr: frMessages,
     },
-    datetimeFormats
+    datetimeFormats,
+    numberFormats
 })
 
 export default i18n

@@ -21,11 +21,12 @@
 
       <div class="dates">
         <h3>Dates</h3>
-        Today's date : {{ $d(Date.now(), 'long') }}
+         {{ $d(Date.now(), 'long') }}
       </div>
 
       <div class="currency">
         <h3>Currencies</h3>
+        {{ $n(100, 'currency') }}
       </div>
     </div>
   </main>
