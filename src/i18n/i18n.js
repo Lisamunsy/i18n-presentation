@@ -1,8 +1,10 @@
 import { createI18n } from "vue-i18n";
+import enMessages from "./en";
+import frMessages from "./fr";
 
 
 const shortDatetimeFormat = {
-    year: 'numeric', month: 'short', day: '2-digit'
+    year: 'numeric', month: '2-digit', day: '2-digit'
 }
 const longDatetimeFormat ={
     year: 'numeric', month: 'long', day: 'numeric'
@@ -23,8 +25,8 @@ const i18n = createI18n({
     locale: 'en',
     fallbackLocale: 'en',
     messages: {
-        en: ()=> import('./en.js'),
-        fr: ()=> import('./fr.js'),
+        en: enMessages,
+        fr: frMessages,
     },
     datetimeFormats
 })
